@@ -1,0 +1,93 @@
+Candidate Setup Guide: Full Stack Interview
+What to expect
+● You will build a small full stack app (a simple backend API, a simple frontend, and a database).
+● deploy it on AWS.
+● You are allowed and encouraged to use AI tools. We care about your decisions, how you check AI
+output, and how well you can explain your code.
+Checklist
+● Laptop with charger, webcam, microphone, headphones, and a stable internet connection
+● Code editor installed (VS Code recommended)
+● Node.js (version 18 or newer) or Go installed, whichever you prefer
+● Git installed, and a GitHub account
+● Supabase account and one project created
+● AWS account created (Free plan)
+● One AI tool logged in and tested
+Step 1: Supabase (your database)
+Supabase gives you a free hosted Postgres database.
+1. Go to supabase.com and sign up (signing in with GitHub is the fastest).
+2. Create a new project. Choose a name and a database password, and save the password somewhere safe.
+3. Wait a few minutes until the project is ready.
+4. Open the project and find your Project URL and API keys under the project settings. You will need these
+during the interview.
+5. Do this 1 to 2 days before the interview. Free Supabase projects pause after one week without activity.
+6. On the morning of the interview, open your project once so it is awake and running.
+Free plan limits (for your information): 2 active projects, 500 MB database storage, 50,000 monthly active users.
+If you prefer MongoDB, DynamoDB, or another database, that is fine. Just have it ready before we start.
+Connect Supabase MCP to your AI tool
+Supabase offers an MCP server that lets AI tools such as Cursor, Copilot, and Claude create tables and run queries in
+your project directly. It is optional, not required. It can save time, but we do not score the setup.
+● Connect it only to the test project you created for this interview, never to a real or production project.
+● Check Supabase's MCP documentation for options such as limiting access to one project or using read-only
+mode, and use them.
+● Review any SQL the AI wants to run before you approve it. You are responsible for what it changes.
+● Set it up before the interview. If it does not work within 10 minutes, skip it and use the Supabase dashboard
+or client library instead.
+Step 2: AWS account (Free plan)
+AWS gives new accounts free credits to explore their services.
+1. Go to aws.amazon.com/free and choose Create a Free Account.
+2. Use an email address that you have not used for another AWS account. Accounts created before July 2025
+may not receive the new credits.
+3. Choose the Free plan when asked.
+4. You will need to add a payment card for identity verification. On the Free plan, usage is taken from your
+credits, not from your card.
+5. After sign-up you should see about $100 in credits on your billing page. You can earn more by completing
+a few tasks in the Explore AWS widget on the console home page.
+6. Turn on MFA for your root user and set a budget alert. These are good habits and are also part of the
+AWS onboarding tasks.
+7. Create a separate IAM user for daily work instead of using the root user.
+Good to know: The Free plan closes automatically after 6 months or when your credits run out, whichever comes
+first. Do not use an account you care about for this.Do not stress if AWS verification is delayed. If your account is
+not ready by the interview, tell us. You can describe your deployment design on paper instead.
+Optional: Free hosting on Netlify or Render
+If your AWS account is not ready, or you want to show a live deployment, you can host your app for free on Netlify
+(frontend) and Render (backend). Both deploy straight from a GitHub repo. Deploying is not required, but a live
+link helps us see your work.
+Suggested setup: frontend on Netlify, backend API on Render, database on Supabase.
+Netlify (frontend)
+1. Go to netlify.com and sign up (signing in with GitHub is the fastest).
+2. Add a new site and import your frontend repo from GitHub.
+3. Set the build command and output folder for your framework, and add your environment variables in the
+Netlify dashboard.
+Free plan limits: 300 credits per month, which is a hard limit. Bandwidth and each production deploy use credits,
+and your site pauses if you run out. Keep deploys to a minimum before the interview.
+Render (backend)
+1. Go to render.com and sign up (signing in with GitHub is the fastest).
+2. Create a new Web Service from your backend repo, choose the Free instance type, and add your
+environment variables in the dashboard.
+3. Use your Supabase database, not Render's free database, which expires after 30 days.
+Free plan limits: A free web service goes to sleep after 15 minutes without traffic and takes about a minute to wake
+up. Open your backend URL once, about 5 minutes before the interview, so it is awake. Files written to disk are
+deleted when the service restarts, so keep data in the database.
+Step 3: Your AI tool
+You may use any AI tools you like, including GitHub Copilot, Cursor, Claude, ChatGPT, Gemini, Windsurf, or
+Amazon Q, and you can combine more than one. Pick the ones you work best with and log in and test them before
+the interview.
+Options with free usage (limits change often, so check each site):
+● GitHub Copilot
+● Cursor
+● Any AI tool
+Tip: Free tiers have rate limits. Keep a second tool ready in case you reach the limit during the session.
+Our rule about AI: you are responsible for every line you submit. Read what the AI gives you, test it, and be ready
+to explain it.
+Quick self-test (5 minutes)
+Before the interview, check that you can:
+1. Connect to your database from code (or from the Supabase dashboard)
+2. Get a reply from your AI tool
+3. Log in to the AWS console
+Also check that you can share your screen on the meeting platform we will use. If any of these fail, contact us before
+the interview.
+On the day
+● Join 10 minutes early to test your camera, microphone, and screen sharing.
+● Keep your laptop charged and plugged in, with your accounts already logged in.
+● Close unrelated apps and notifications.
+Good luck. We are looking forward to seeing how you build.
